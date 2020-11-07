@@ -1,0 +1,65 @@
+
+// Enjoy discount of food
+#include <stdio.h>
+
+int main()
+{
+    //variable declearation
+    char customer;
+    int number_of_burgers,number_of_pizzas,number_of_drinks,total_items;//Variable declearation
+    int price_of_one_burger=120, price_of_one_pizza=300, price_of_one_drink=100;
+    int price_of_total_burger,price_of_total_pizza,price_of_total_drinks;
+    int final_price;
+    int counter,customer_number;
+    
+    printf("Enter customer: ");
+    scanf("%d",&customer_number);
+    
+    //prompting and taking input from first customer
+    for(counter=0;counter<customer_number;counter++)
+    {
+        printf("Enter Customer name: ");
+        scanf(" %c",&customer);
+        //prompting and taking number of burgers from customer
+        printf(" Please enter the number of burgers:-\t");
+        scanf("%d",&number_of_burgers);
+        //prompting and taking number of pizzas from customer
+        printf("please enter number of pizzas:-\t");
+        scanf("%d",&number_of_pizzas);
+        //prompting and taking number of drinks from customer
+        printf("please enter number of drinks:-\t");
+        scanf("%d",&number_of_drinks);
+        
+        //multiplication the price with ordering items
+        price_of_total_burger=price_of_one_burger*number_of_burgers;
+        price_of_total_pizza= price_of_one_pizza*number_of_pizzas;
+        price_of_total_drinks=price_of_one_drink*number_of_drinks;
+        //Display the price of total burgers
+        printf("Your total price of burgers is:%d Tk\n",price_of_total_burger);
+        //Display the price of total pizzass
+        printf("Your total price of pizzas is:%d Tk\n",price_of_total_pizza);
+        //Display the price of total drinks
+        printf("Your total price of drinks is:%d Tk\n",price_of_total_drinks);
+        //Add the price of three items
+        final_price=price_of_total_burger+price_of_total_pizza+price_of_total_drinks;
+        //Display final price
+        printf("Your final price is:%d tk\n",final_price);
+        
+        if(final_price>1000)
+        {
+            final_price=final_price-final_price*0.5;
+            printf("Price with discount: %d\n",final_price);
+            
+        }
+        else if(final_price>500 && final_price<1000)
+        {
+            final_price=final_price-final_price*0.3;
+            printf("Price with discount: %d\n",final_price);
+        }
+        else{
+            printf("Price without discount: %d \n",final_price);
+        }
+    }
+     
+     return 0;
+}     

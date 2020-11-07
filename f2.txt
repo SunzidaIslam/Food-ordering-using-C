@@ -1,0 +1,100 @@
+
+// Enjoy discount of food
+#include <stdio.h>
+
+int main()
+{
+    //variable declearation
+    char customer[3];
+    int number_of_burgers[3],number_of_pizzas[3],number_of_drinks[3],total_items[3];//Variable declearation
+    int price_of_one_burger=120, price_of_one_pizza=300, price_of_one_drink=100;
+    int price_of_total_burger[3],price_of_total_pizza[3],price_of_total_drinks[3];
+    int final_price[3];
+    printf("Enter Customer name: ");
+    scanf("%c",&customer[0]);
+    //prompting and taking number of burgers from customer
+    printf(" Please enter the number of burgers:-\t");
+    scanf("%d",&number_of_burgers[0]);
+    //prompting and taking number of pizzas from customer
+    printf("please enter number of pizzas:-\t");
+    scanf("%d",&number_of_pizzas[0]);
+    //prompting and taking number of drinks from customer
+    printf("please enter number of drinks:-\t");
+    scanf("%d",&number_of_drinks[0]);
+    
+    //multiplication the price with ordering items
+    price_of_total_burger[0]=price_of_one_burger*number_of_burgers[0];
+    price_of_total_pizza[0]= price_of_one_pizza*number_of_pizzas[0];
+    price_of_total_drinks[0]=price_of_one_drink*number_of_drinks[0];
+    //Display the price of total burgers
+    printf("Your total price of burgers is:%d Tk\n",price_of_total_burger[0]);
+    //Display the price of total pizzass
+    printf("Your total price of pizzas is:%d Tk\n",price_of_total_pizza[0]);
+    //Display the price of total drinks
+    printf("Your total price of drinks is:%d Tk\n",price_of_total_drinks[0]);
+    //Add the price of three items
+    final_price[0]=price_of_total_burger[0]+price_of_total_pizza[0]+price_of_total_drinks[0];
+    //Display final price
+    printf("Your final price is:%d tk\n",final_price[0]);
+    
+    if(final_price[0]>1000)
+    {
+        final_price[0]=final_price[0]-final_price[0]*0.5;
+        printf("Price with discount: %d\n",final_price[0]);
+        
+    }
+    else if(final_price[0]>500 && final_price[0]<1000)
+    {
+        final_price[0]=final_price[0]-final_price[0]*0.3;
+        printf("Price with discount: %d\n",final_price[0]);
+    }
+    else{
+        printf("Price without discount: %d \n",final_price[0]);
+    }
+    //Bill of second customer 
+    
+    printf("Enter Customer name: ");
+    scanf(" %c",&customer[1]);
+    //prompting and taking number of burgers from customer
+    printf(" Please enter the number of burgers:-\t");
+    scanf("%d",&number_of_burgers[1]);
+    //prompting and taking number of pizzas from customer
+    printf("please enter number of pizzas:-\t");
+    scanf("%d",&number_of_pizzas[1]);
+    //prompting and taking number of drinks from customer
+    printf("please enter number of drinks:-\t");
+    scanf("%d",&number_of_drinks[1]);
+    
+    //multiplication the price with ordering items
+    price_of_total_burger[1]=price_of_one_burger*number_of_burgers[1];
+    price_of_total_pizza[1]= price_of_one_pizza*number_of_pizzas[1];
+    price_of_total_drinks[1]=price_of_one_drink*number_of_drinks[1];
+    //Display the price of total burgers
+    printf("Your total price of burgers is:%d Tk\n",price_of_total_burger[1]);
+    //Display the price of total pizzass
+    printf("Your total price of pizzas is:%d Tk\n",price_of_total_pizza[1]);
+    //Display the price of total drinks
+    printf("Your total price of drinks is:%d Tk\n",price_of_total_drinks[1]);
+    //Add the price of three item
+    final_price[1]=price_of_total_burger[1]+price_of_total_pizza[1]+price_of_total_drinks[1];
+    //Display final price
+    printf("Your final price is:%d tk\n",final_price[1]);
+    
+    if(final_price[1]>1000)
+    {
+        final_price[1]=final_price[1]-final_price[1]*0.5;
+        printf("Price with discount: %d\n",final_price[1]);
+        
+    }
+    else if(final_price[1]>500 && final_price[1]<1000)
+    {
+        final_price[1]=final_price[1]-final_price[1]*0.3;
+        printf("Price with discount: %d\n",final_price[1]);
+    }
+    else{
+        printf("Price without discount: %d \n",final_price[1]);
+    }
+    
+    
+     return 0;
+}     
